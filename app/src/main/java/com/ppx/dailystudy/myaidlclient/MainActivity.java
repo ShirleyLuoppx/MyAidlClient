@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         public void onServiceConnected(ComponentName name, IBinder service) {
             iStudent = IStudent.Stub.asInterface(service);
             Toast.makeText(getApplicationContext(), "连接成功", Toast.LENGTH_LONG).show();
-            Log.d(TAG, "onServiceConnected: 连接成功");
+            Log.d(TAG, "onServiceConnected: 连接成功   ComponentName:"+name+"--，pck:"+name.getPackageName());
         }
 
         @Override
